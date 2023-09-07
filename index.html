@@ -16,23 +16,60 @@
             align-items: center;
             min-height: 100vh; /* Imposta un'altezza minima per coprire l'intero schermo */
             overflow: hidden;
+            position: relative;
         }
+
+        /* Stile per il background glitch */
+        body::before {
+            content: "";
+            background-image: url('glitch-effect.jpg'); /* Sostituisci con il percorso del tuo effetto glitch */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5; /* Opacità del glitch effect */
+            z-index: -1; /* Posiziona il glitch dietro gli altri elementi */
+            animation: glitch 1s linear infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(-5px, 5px);
+            }
+            50% {
+                transform: translate(5px, -5px);
+            }
+            75% {
+                transform: translate(-5px, 5px);
+            }
+            100% {
+                transform: translate(5px, -5px);
+            }
+        }
+
         .video-container {
             position: relative;
             width: 100%; /* Imposta la larghezza al 100% per adattarla a tutti i dispositivi */
             max-width: 400px; /* Imposta la larghezza massima desiderata per il contenitore video su schermi più grandi */
             margin-bottom: 20px; /* Spazio tra il video e il testo */
         }
+
         video {
             width: 100%;
             height: auto; /* L'altezza si adatta automaticamente per mantenere le proporzioni */
         }
+
         .message-box {
             color: purple;
             font-family: 'Courier New', monospace;
             font-size: 18px; /* Dimensione del testo */
             white-space: nowrap; /* Impedisce il testo di andare a capo */
         }
+
         .contact-link {
             color: purple;
             font-size: 24px;
@@ -75,9 +112,15 @@
             display: block;
         }
 
+        /*  larghezza desiderata per l'icona */
         .icon-container video {
-            width: 50px; /* Imposta la larghezza desiderata per l'icona */
+            width: 50px;
             height: auto; /* L'altezza si adatterà automaticamente per mantenere le proporzioni */
+        }
+
+        /* stili CSS per ingrandire solo l'icona "tele.webm" */
+        .icon-container a[href="https://t.me/lecterapp"] video {
+            width: 100px; /* Imposta la larghezza desiderata per ingrandire l'icona */
         }
     </style>
 </head>
@@ -92,7 +135,7 @@
         <!-- Inserire ulteriori testi e informazioni qui -->
     </div>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScsd4E5-9uttO_5IQY0RloSdAXcz_CsSmKGyS9XoxtOnXBJhQ/viewform?usp=sf_link" class="contact-link">→ →Click here to be contacted← ←</a>
-    <!-- Aggiungi l'icona WebM cliccabile -->
+    <!-- icona WebM cliccabile -->
     <div class="icon-container">
         <a href="https://www.instagram.com/agonylecter/" target="_blank">
             <video autoplay loop muted playsinline>
@@ -106,8 +149,14 @@
                 Il tuo browser non supporta il formato video.
             </video>
         </a>
+        <a href="https://t.me/lecterapp" target="_blank">
+            <video autoplay loop muted playsinline>
+                <source src="tele.webm" type="video/webm">
+                Il tuo browser non supporta il formato video.
+            </video>
+        </a>
     </div>
-    <p class="copyright">© 2023 Design e script by Agony</p>
+    <p class="copyright">© 2023 Design e script by AgonyLecter</p>
 </body>
 </html>
 
