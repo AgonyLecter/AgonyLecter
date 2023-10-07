@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgonyLecter</title>
     <style>
-        /* Stili CSS del tuo sito web */
+        /* Stili CSS */
         body {
             margin: 0;
             padding: 0;
@@ -14,7 +14,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Imposta un'altezza minima per coprire l'intero schermo */
+            min-height: 100vh; 
             overflow: hidden;
             position: relative;
         }
@@ -22,14 +22,14 @@
         /* Stile per il background glitch */
         body::before {
             content: "";
-            background-image: url('glitch-effect.jpg'); /* Sostituisci con il percorso del tuo effetto glitch */
+            background-image: url('glitch-effect.jpg'); 
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.5; /* Opacità del glitch effect */
-            z-index: -1; /* Posiziona il glitch dietro gli altri elementi */
+            opacity: 0.5; 
+            z-index: -1; 
             animation: glitch 1s linear infinite;
         }
 
@@ -53,21 +53,21 @@
 
         .video-container {
             position: relative;
-            width: 100%; /* Imposta la larghezza al 100% per adattarla a tutti i dispositivi */
-            max-width: 400px; /* Imposta la larghezza massima desiderata per il contenitore video su schermi più grandi */
-            margin-bottom: 20px; /* Spazio tra il video e il testo */
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px; 
         }
 
         video {
             width: 100%;
-            height: auto; /* L'altezza si adatta automaticamente per mantenere le proporzioni */
+            height: auto; 
         }
 
         .message-box {
             color: purple;
             font-family: 'Courier New', monospace;
-            font-size: 18px; /* Dimensione del testo */
-            white-space: nowrap; /* Impedisce il testo di andare a capo */
+            font-size: 18px; 
+            white-space: nowrap; 
         }
 
         .contact-link {
@@ -76,7 +76,7 @@
             cursor: pointer;
             overflow: hidden;
             animation: neon 1.5s linear infinite alternate;
-            text-decoration: none; /* Rimuove il sottolineato del link */
+            text-decoration: none; 
         }
 
         @keyframes neon {
@@ -89,7 +89,7 @@
         }
 
         .copyright {
-            margin-top: 20px; /* Spostato più in basso */
+            margin-top: 20px; 
             color: purple;
             font-size: 12px;
             display: flex;
@@ -100,10 +100,10 @@
             width: 12px;
             height: 12px;
             margin-right: 5px;
-            filter: invert(100%); /* Cambia il colore del logo del marchio */
+            filter: invert(100%); 
         }
 
-        /* Aggiungi stili per posizionare l'icona sotto il link */
+       
         .icon-container {
             text-align: center;
         }
@@ -112,15 +112,15 @@
             display: block;
         }
 
-        /*  larghezza desiderata per l'icona */
+        
         .icon-container video {
             width: 50px;
-            height: auto; /* L'altezza si adatterà automaticamente per mantenere le proporzioni */
+            height: auto; 
         }
 
-        /* stili CSS per ingrandire solo l'icona "tele.webm" */
+       
         .icon-container a[href="https://t.me/lecterapp"] video {
-            width: 100px; /* Imposta la larghezza desiderata per ingrandire l'icona */
+            width: 100px; /*
         }
     </style>
 </head>
@@ -132,7 +132,7 @@
         </video>
     </div>
     <div class="message-box">
-        <!-- Inserire ulteriori testi e informazioni qui -->
+       
     </div>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScsd4E5-9uttO_5IQY0RloSdAXcz_CsSmKGyS9XoxtOnXBJhQ/viewform?usp=sf_link" class="contact-link">→ →Click here to be contacted← ←</a>
     <!-- icona WebM cliccabile -->
